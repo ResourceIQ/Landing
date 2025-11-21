@@ -1,14 +1,11 @@
-"use client"
+
 
 import React, { use } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from './header'
-import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-})
 
 export default function HeroSection() {
     return (
@@ -27,9 +24,9 @@ export default function HeroSection() {
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="px-5 text-base">
+                                        className="px-5 text-base bg-gradient-to-r from-[#914EEC] to-[#2CCB72]">
                                         <Link href="#link">
-                                            <span className="text-nowrap">Start Building</span>
+                                            <span className="text-nowrap">Get Started</span>
                                         </Link>
                                     </Button>
                                     <Button
@@ -44,13 +41,13 @@ export default function HeroSection() {
                                     </Button>
                                 </div>
                             </div>
-                            {/* <Image
-                                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
-                                src="https://ik.imagekit.io/lrigu76hy/tailark/abstract-bg.jpg?updatedAt=1745733473768"
+                            <Image
+                                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-76 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+                                src="/images/main.jpg"
                                 alt="Abstract Object"
                                 height="4000"
                                 width="3000"
-                            /> */}
+                            />
                         </div>
                     </div>
                 </section>

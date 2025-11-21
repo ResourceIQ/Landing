@@ -23,8 +23,12 @@ export default function IntegrationsSection() {
                             />
                             <BorderBeam
                                 duration={5}
-                                size={300}
-                                className="from-transparent via-yellow-700 to-transparent dark:via-white/50"
+                                size={400}
+                                className="
+                                    from-transparent
+                                    via-[#B676FF]
+                                    to-transparent
+                                "
                             />
                         </div>
                     </div>
