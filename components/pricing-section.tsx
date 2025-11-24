@@ -1,54 +1,117 @@
-export default function PricingSection() {
-  return (
-    <section className="py-20">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Choose the plan that's right for your team. No hidden fees.
-        </p>
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Check } from 'lucide-react'
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          
-          {/* Free Plan */}
-          <div className="border rounded-2xl p-8 bg-background/50 hover:shadow-lg duration-200">
-            <h3 className="text-2xl font-semibold mb-3">Starter</h3>
-            <p className="text-4xl font-bold mb-4">$0</p>
-            <p className="text-muted-foreground mb-6">For small teams getting started</p>
-            <ul className="space-y-3 text-left">
-              <li>✔ Basic features</li>
-              <li>✔ 2 team members</li>
-              <li>✔ Community support</li>
-            </ul>
-          </div>
+export default function Pricing() {
+    return (
+        <section className="py-16 md:py-32">
+            <div className="mx-auto max-w-6xl px-6">
+                <div className="mx-auto max-w-2xl space-y-6 text-center">
+                    <h1 className="text-center text-4xl font-semibold lg:text-5xl">Pricing that Scales with You</h1>
+                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+                </div>
 
-          {/* Pro Plan */}
-          <div className="border rounded-2xl p-8 bg-primary text-primary-foreground shadow-xl scale-105">
-            <h3 className="text-2xl font-semibold mb-3">Pro</h3>
-            <p className="text-4xl font-bold mb-4">$29</p>
-            <p className="opacity-80 mb-6">For growing teams and businesses</p>
-            <ul className="space-y-3 text-left">
-              <li>✔ All Starter features</li>
-              <li>✔ Unlimited team members</li>
-              <li>✔ Priority support</li>
-              <li>✔ Advanced analytics</li>
-            </ul>
-          </div>
+                <div className="mt-8 grid gap-6 [--color-card:var(--color-muted)] *:border-none *:shadow-none md:mt-20 md:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]">
+                    <Card className="bg-muted flex flex-col">
+                        <CardHeader>
+                            <CardTitle className="font-medium">Free</CardTitle>
+                            <span className="my-3 block text-2xl font-semibold">$0 / mo</span>
+                            <CardDescription className="text-sm">Per editor</CardDescription>
+                        </CardHeader>
 
-          {/* Enterprise Plan */}
-          <div className="border rounded-2xl p-8 bg-background/50 hover:shadow-lg duration-200">
-            <h3 className="text-2xl font-semibold mb-3">Enterprise</h3>
-            <p className="text-4xl font-bold mb-4">Custom</p>
-            <p className="text-muted-foreground mb-6">Tailored solutions for enterprises</p>
-            <ul className="space-y-3 text-left">
-              <li>✔ All Pro features</li>
-              <li>✔ Dedicated account manager</li>
-              <li>✔ Custom integrations</li>
-              <li>✔ SLA support</li>
-            </ul>
-          </div>
+                        <CardContent className="space-y-4">
+                            <hr className="border-dashed" />
 
-        </div>
-      </div>
-    </section>
-  );
+                            <ul className="list-outside space-y-3 text-sm">
+                                {['Basic Analytics Dashboard', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="flex items-center gap-2">
+                                        <Check className="size-3" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </CardContent>
+
+                        <CardFooter className="mt-auto">
+                            <Button
+                                asChild
+                                variant="outline"
+                                className="w-full">
+                                <Link href="">Get Started</Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+
+                    <Card className="bg-muted relative">
+                        <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">Popular</span>
+
+                        <div className="flex flex-col">
+                            <CardHeader>
+                                <CardTitle className="font-medium">Pro</CardTitle>
+                                <span className="my-3 block text-2xl font-semibold">$19 / mo</span>
+                                <CardDescription className="text-sm">Per editor</CardDescription>
+                            </CardHeader>
+
+                            <CardContent className="space-y-4">
+                                <hr className="border-dashed" />
+                                <ul className="list-outside space-y-3 text-sm">
+                                    {['Everything in Free Plan', '5GB Cloud Storage', 'Email and Chat Support', 'Access to Community Forum', 'Single User Access', 'Access to Basic Templates', 'Mobile App Access', '1 Custom Report Per Month', 'Monthly Product Updates', 'Standard Security Features'].map((item, index) => (
+                                        <li
+                                            key={index}
+                                            className="flex items-center gap-2">
+                                            <Check className="size-3" />
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </CardContent>
+
+                            <CardFooter>
+                                <Button
+                                    asChild
+                                    className="w-full">
+                                    <Link href="">Get Started</Link>
+                                </Button>
+                            </CardFooter>
+                        </div>
+                    </Card>
+
+                    <Card className="bg-muted flex flex-col">
+                        <CardHeader>
+                            <CardTitle className="font-medium">Startup</CardTitle>
+                            <span className="my-3 block text-2xl font-semibold">$29 / mo</span>
+                            <CardDescription className="text-sm">Per editor</CardDescription>
+                        </CardHeader>
+
+                        <CardContent className="space-y-4">
+                            <hr className="border-dashed" />
+
+                            <ul className="list-outside space-y-3 text-sm">
+                                {['Everything in Pro Plan', '5GB Cloud Storage', 'Email and Chat Support'].map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="flex items-center gap-2">
+                                        <Check className="size-3" />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </CardContent>
+
+                        <CardFooter className="mt-auto">
+                            <Button
+                                asChild
+                                variant="outline"
+                                className="w-full">
+                                <Link href="">Get Started</Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                </div>
+            </div>
+        </section>
+    )
 }
