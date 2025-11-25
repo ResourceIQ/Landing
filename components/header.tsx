@@ -6,11 +6,14 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import { ModeToggle } from './ui/mode-toggle'
 
+
 const menuItems = [
     { name: 'Features', href: '#link' },
     { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Integrations', href: '/integration' },
+    { name: 'Team', href: '/team' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href:'/about' },
 ]
 
 export const HeroHeader = () => {
