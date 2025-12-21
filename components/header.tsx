@@ -75,15 +75,8 @@ export const HeroHeader = () => {
                                     asChild
                                     variant="outline"
                                     size="sm">
-                                    <Link href="#">
-                                        <span>Login</span>
-                                    </Link>
-                                </Button>
-                                <Button
-                                    asChild
-                                    size="sm">
-                                    <Link href="#">
-                                        <span>Sign Up</span>
+                                    <Link href="/preregistration">
+                                        <span>Preregistration</span>
                                     </Link>
                                 </Button>
                                 <ModeToggle />
