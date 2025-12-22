@@ -2,15 +2,15 @@ import Link from 'next/link'
 
 const members = [
     {
-        name: 'Liam Brown',
+        name: 'Diluka', 
         role: 'Founder - CEO',
-        avatar: 'https://alt.tailus.io/images/team/member-one.webp',
-        link: '#',
+        avatar: '/images/team/diluka.jpeg',
+        link: 'http://diluka.infy.uk',
     },
     {
-        name: 'Elijah Jones',
+        name: 'Hirusha',
         role: 'Co-Founder - CTO',
-        avatar: 'https://alt.tailus.io/images/team/member-two.webp',
+        avatar: '/images/team/hirusha.jpeg',
         link: '#',
     },
     {

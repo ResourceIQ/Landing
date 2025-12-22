@@ -7,37 +7,16 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function registerUser(formData: FormData) {
   const email = formData.get('email') as string;
 
+  console.log("Submit Email:",email)
   // Basic validation
   if (!email || !email.includes('@')) {
     return { error: "Please enter a valid email address." };
   }
 
   try {
-    const { data, error } = await resend.emails.send({
-  from: 'onboarding@resend.dev', 
-  to: 'dilukalahiruofficial@gmail.com', // Must be your account email
-  subject: 'Test Preregistration',
-  html: `<p>Testing the form for ${email}</p>`
-});
-    // 1. Send NOTIFICATION to you
-    await resend.emails.send({
-      from: 'system@updates.resourceiq.lk',
-      to: 'dilukalahiruofficial@gmail.com',
-      subject: '🚀 New Lead: Resource-IQ',
-      html: `
-        <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee;">
-          <h2 style="color: #333;">New Preregistration</h2>
-          <p>A new user has joined the Resource-IQ waitlist:</p>
-          <p style="font-size: 18px; font-weight: bold; color: #7c3aed;">${email}</p>
-          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
-          <p style="font-size: 12px; color: #666;">Sent from Resource-IQ Website</p>
-        </div>
-      `
-    });
-
-    // 2. Send WELCOME email to the user
+    //Send WELCOME email to the user
     const { error: welcomeError } = await resend.emails.send({
-      from: 'hello@updates.resourceiq.lk',
+      from: 'onboarding@resend.dev',
       to: email,
       subject: 'Welcome to Resource-IQ Early Access',
       html: `
