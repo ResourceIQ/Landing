@@ -10,7 +10,7 @@ export async function registerUser(formData: FormData) {
   const customerEmail = formData.get('email') as string;
 
   if (!customerEmail || !customerEmail.includes('@')) {
-    return { error: "Please enter a valid email address." };
+    return { error: "Please enter a valid email address.." };
   }
 
   try {
