@@ -153,7 +153,7 @@ export default function Footer() {
                             ))}
                         </ul>
 
-                        <form className="mt-12 w-full max-w-xs">
+                        {/* <form className="mt-12 w-full max-w-xs">
                             <div className="space-y-2.5">
                                 <Label
                                     className="block text-sm font-medium"
@@ -174,7 +174,7 @@ export default function Footer() {
                                 className="mt-3">
                                 <span>Subscribe</span>
                             </Button>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 <div className="bg-muted mt-16 flex items-center justify-between rounded-md p-4 px-6 py-3">
