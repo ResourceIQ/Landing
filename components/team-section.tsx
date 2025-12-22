@@ -1,34 +1,59 @@
+import Link from 'next/link'
+
 const members = [
     {
-        name: 'Méschac Irung',
-        role: 'Creator',
-        avatar: 'https://avatars.githubusercontent.com/u/47919550?v=4',
+        name: 'Diluka', 
+        role: 'Founder - CEO',
+        avatar: '/images/team/diluka.jpeg',
+        link: 'http://diluka.infy.uk',
     },
     {
-        name: 'Théo Balick',
-        role: 'Frontend Dev',
-        avatar: 'https://avatars.githubusercontent.com/u/68236786?v=4',
+        name: 'Hirusha',
+        role: 'Co-Founder - CTO',
+        avatar: '/images/team/hirusha.jpeg',
+        link: '#',
     },
     {
-        name: 'Glodie Lukose',
-        role: 'Frontend Dev',
-        avatar: 'https://avatars.githubusercontent.com/u/99137927?v=4',
+        name: 'Isabella Garcia',
+        role: 'Sales Manager',
+        avatar: 'https://alt.tailus.io/images/team/member-three.webp',
+        link: '#',
     },
     {
-        name: 'Bernard Ngandu',
-        role: 'Backend Dev',
-        avatar: 'https://avatars.githubusercontent.com/u/31113941?v=4',
+        name: 'Henry Lee',
+        role: 'UX Engeneer',
+        avatar: 'https://alt.tailus.io/images/team/member-four.webp',
+        link: '#',
+    },
+    {
+        name: 'Ava Williams',
+        role: 'Interaction Designer',
+        avatar: 'https://alt.tailus.io/images/team/member-five.webp',
+        link: '#',
+    },
+    {
+        name: 'Olivia Miller',
+        role: 'Visual Designer',
+        avatar: 'https://alt.tailus.io/images/team/member-six.webp',
+        link: '#',
     },
 ]
 
 export default function TeamSection() {
     return (
-        <section className="py-12 md:py-32">
-            <div className="mx-auto max-w-3xl px-8 lg:px-0">
-                <h2 className="mb-8 text-4xl font-bold md:mb-16 lg:text-5xl">Our team</h2>
-
-                <div>
-                    <h3 className="mb-6 text-lg font-medium">Leadership</h3>
+        <section className="bg-gray-50 py-16 md:py-32 dark:bg-transparent">
+            <div className="mx-auto max-w-5xl border-t px-6">
+                <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">Team</span>
+                <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
+                    <div className="sm:w-2/5">
+                        <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+                    </div>
+                    <div className="mt-6 sm:mt-0">
+                        <p>During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
+                    </div>
+                </div>
+                
+                <div className="mt-12 md:mt-24">
                     <div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
                         {members.map((member, index) => (
                             <div key={index}>
@@ -40,33 +65,33 @@ export default function TeamSection() {
                             </div>
                         ))}
                     </div>
-                </div>
-
-                <div className="mt-6">
-                    <h3 className="mb-6 text-lg font-medium">Engineering</h3>
-                    <div data-rounded="full" className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
+                    <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                         {members.map((member, index) => (
-                            <div key={index}>
-                                <div className="bg-background size-20 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                    <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
+                            <div
+                                key={index}
+                                className="group overflow-hidden">
+                                <img
+                                    className="h-96 w-full rounded-md object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:h-[22.5rem] group-hover:rounded-xl"
+                                    src={member.avatar}
+                                    alt="team member"
+                                    width="826"
+                                    height="1239"
+                                />
+                                <div className="px-2 pt-2 sm:pb-0 sm:pt-4">
+                                    <div className="flex justify-between">
+                                        <h3 className="text-base font-medium transition-all duration-500 group-hover:tracking-wider">{member.name}</h3>
+                                        <span className="text-xs">_0{index + 1}</span>
+                                    </div>
+                                    <div className="mt-1 flex items-center justify-between">
+                                        <span className="text-muted-foreground inline-block translate-y-6 text-sm opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">{member.role}</span>
+                                        <Link
+                                            href={member.link}
+                                            className="group-hover:text-primary-600 dark:group-hover:text-primary-400 inline-block translate-y-8 text-sm tracking-wide opacity-0 transition-all duration-500 hover:underline group-hover:translate-y-0 group-hover:opacity-100">
+                                            {' '}
+                                            Linktree
+                                        </Link>
+                                    </div>
                                 </div>
-                                <span className="mt-2 block text-sm">{member.name}</span>
-                                <span className="text-muted-foreground block text-xs">{member.role}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="mt-6">
-                    <h3 className="mb-6 text-lg font-medium">Marketing</h3>
-                    <div data-rounded="full" className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
-                        {members.map((member, index) => (
-                            <div key={index}>
-                                <div className="bg-background size-20 rounded-full border p-0.5 shadow shadow-zinc-950/5">
-                                    <img className="aspect-square rounded-full object-cover" src={member.avatar} alt={member.name} height="460" width="460" loading="lazy" />
-                                </div>
-                                <span className="mt-2 block text-sm">{member.name}</span>
-                                <span className="text-muted-foreground block text-xs">{member.role}</span>
                             </div>
                         ))}
                     </div>
