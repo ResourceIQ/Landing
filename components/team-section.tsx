@@ -2,39 +2,39 @@ import Link from 'next/link'
 
 const members = [
     {
-        name: 'Diluka', 
-        role: 'Founder - CEO',
+        name: 'U.D. Senuja Imeth Jayasekara',
+        role: 'Coordinator & Introduction Specialist',
+        avatar: '/images/team/senuja.jpeg',
+        link: '#',
+    },
+    {
+        name: 'P.A.A Chasith Gunathilaka',
+        role: 'Visual Strategist',
+        avatar: '/images/team/chasith.jpeg',
+        link: '#',
+    },
+    {
+        name: 'S.A.P Diluka Lahiru',
+        role: 'Researcher & Analyst',
         avatar: '/images/team/diluka.jpeg',
         link: 'http://diluka.infy.uk',
     },
     {
-        name: 'Hirusha',
-        role: 'Co-Founder - CTO',
+        name: 'A.G. Nirodha Sandanunwan Adhikari',
+        role: 'Technical Planner',
+        avatar: '/images/team/nirodha.jpeg',
+        link: '#',
+    },
+    {
+        name: 'H.M.Hirusha Lakshan Jayaweera',
+        role: 'System Designer & Methodologist',
         avatar: '/images/team/hirusha.jpeg',
         link: '#',
     },
     {
-        name: 'Isabella Garcia',
-        role: 'Sales Manager',
-        avatar: 'https://alt.tailus.io/images/team/member-three.webp',
-        link: '#',
-    },
-    {
-        name: 'Henry Lee',
-        role: 'UX Engeneer',
-        avatar: 'https://alt.tailus.io/images/team/member-four.webp',
-        link: '#',
-    },
-    {
-        name: 'Ava Williams',
-        role: 'Interaction Designer',
-        avatar: 'https://alt.tailus.io/images/team/member-five.webp',
-        link: '#',
-    },
-    {
-        name: 'Olivia Miller',
-        role: 'Visual Designer',
-        avatar: 'https://alt.tailus.io/images/team/member-six.webp',
+        name: 'T.L.Supuni Hiranyada Liyanage',
+        role: 'Project Manager & Document Integrator',
+        avatar: '/images/team/supuni.jpeg',
         link: '#',
     },
 ]
@@ -46,10 +46,10 @@ export default function TeamSection() {
                 <span className="text-caption -ml-6 -mt-3.5 block w-max bg-gray-50 px-6 dark:bg-gray-950">Team</span>
                 <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
                     <div className="sm:w-2/5">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+                        <h2 className="text-3xl font-bold sm:text-4xl">Meet the minds behind ResourceIQ</h2>
                     </div>
                     <div className="mt-6 sm:mt-0">
-                        <p>During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>
+                        <p>ResourceIQ is built by six passionate software engineering students from IIT who experienced firsthand the pain of inefficient task allocation. We're not just building a tool—we're solving a problem we've lived.</p>
                     </div>
                 </div>
                 

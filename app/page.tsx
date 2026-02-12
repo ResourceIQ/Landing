@@ -2,7 +2,7 @@ import ContentSection from "@/components/content-3";
 import Features from "@/components/features-3";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
-import IntegrationsSection from "@/components/integrations-6";
+import IntegrationsSection from "@/components/Integrations-section";
 
 export default function Home() {
   return (

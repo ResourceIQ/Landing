@@ -8,8 +8,6 @@ import { ModeToggle } from './ui/mode-toggle'
 
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
     { name: 'Integrations', href: '/integration' },
     { name: 'Team', href: '/team' },
     { name: 'Pricing', href: '/pricing' },

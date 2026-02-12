@@ -5,43 +5,40 @@ import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Logo } from '@/components/logo'
 
-const enterpriseLinks = [
-    { href: '#', label: 'About' },
-    { href: '#', label: 'Customers' },
-    { href: '#', label: 'Enterprise' },
-    { href: '#', label: 'Partners' },
-    { href: '#', label: 'Jobs' },
+const companyLinks = [
+    { href: '/about', label: 'About' },
+    { href: '/customers', label: 'Customers' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/partners', label: 'Partners' },
 ]
 
 const productLinks = [
-    { href: '#', label: 'Security' },
-    { href: '#', label: 'Customization' },
-    { href: '#', label: 'Enterprise' },
-    { href: '#', label: 'Partners' },
+    { href: '/features', label: 'Features' },
+    { href: '/security', label: 'Security' },
+    { href: '/privacy', label: 'Privacy' },
+    { href: '/ethics', label: 'Ethical AI' },
+    { href: '/pricing', label: 'Pricing' },
 ]
 
 const docsLinks = [
-    { href: '#', label: 'Introduction' },
-    { href: '#', label: 'Installation' },
-    { href: '#', label: 'Utils' },
-    { href: '#', label: 'Principles' },
-    { href: '#', label: 'Jargon' },
-    { href: '#', label: 'Plugin' },
-    { href: '#', label: 'Customizer' },
-    { href: '#', label: 'Boilerplates' },
+    { href: '/docs/introduction', label: 'Introduction' },
+    { href: '/docs/jira-integration', label: 'Jira Integration' },
+    { href: '/docs/github-integration', label: 'GitHub Integration' },
+    { href: '/docs/recommendation-engine', label: 'Recommendation Engine' },
+    { href: '/docs/api', label: 'API Reference' },
 ]
 
-const communityLinks = [
-    { href: '#', label: 'GitHub' },
-    { href: '#', label: 'Discord' },
-    { href: '#', label: 'Slack' },
-    { href: '#', label: 'X / Twitter' },
+const legalLinks = [
+    { href: '/legal/terms', label: 'Terms' },
+    { href: '/legal/privacy', label: 'Privacy' },
+    { href: '/legal/gdpr', label: 'GDPR' },
+    { href: '/legal/eu-ai-act', label: 'EU AI Act' },
 ]
 
 const footerLinks = [
     {
-        name: 'Enterprise',
-        links: enterpriseLinks,
+        name: 'Company',
+        links: companyLinks,
     },
     {
         name: 'Product',
@@ -50,6 +47,10 @@ const footerLinks = [
     {
         name: 'Docs',
         links: docsLinks,
+    },
+    {
+        name: 'Legal',
+        links: legalLinks,
     },
 ]
 
@@ -139,43 +140,6 @@ export default function Footer() {
                             </ul>
                         </div>
                     ))}
-                    <div>
-                        <span className="text-sm font-medium">Community</span>
-                        <ul className="mt-4 list-inside space-y-4">
-                            {communityLinks.map((link, index) => (
-                                <li key={index}>
-                                    <Link
-                                        href={link.href}
-                                        className="hover:text-primary text-muted-foreground text-sm duration-150">
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-
-                        {/* <form className="mt-12 w-full max-w-xs">
-                            <div className="space-y-2.5">
-                                <Label
-                                    className="block text-sm font-medium"
-                                    htmlFor="email">
-                                    Subscribe to our newsletter
-                                </Label>
-                                <Input
-                                    className="input variant-mixed sz-md"
-                                    placeholder="Your email"
-                                    type="email"
-                                    id="email"
-                                    required
-                                    name="email"
-                                />
-                            </div>
-                            <Button
-                                type="submit"
-                                className="mt-3">
-                                <span>Subscribe</span>
-                            </Button>
-                        </form> */}
-                    </div>
                 </div>
                 <div className="bg-muted mt-16 flex items-center justify-between rounded-md p-4 px-6 py-3">
                     <span>&copy; ResourceIQ 2025 - Present</span>
