@@ -25,7 +25,7 @@ export default function HeroSection() {
                                         asChild
                                         size="lg"
                                         className="px-5 text-base bg-gradient-to-r from-[#914EEC] to-[#2CCB72]">
-                                        <Link href="#link">
+                                        <Link href="/preregistration">
                                             <span className="text-nowrap">Get Started</span>
                                         </Link>
                                     </Button>
@@ -35,7 +35,7 @@ export default function HeroSection() {
                                         size="lg"
                                         variant="ghost"
                                         className="px-5 text-base">
-                                        <Link href="#link">
+                                        <Link href="/preregistration">
                                             <span className="text-nowrap">Request a demo</span>
                                         </Link>
                                     </Button>
