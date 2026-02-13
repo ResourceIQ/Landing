@@ -10,7 +10,7 @@ const members = [
     {
         name: 'P.A.A Chasith Gunathilaka',
         role: 'Visual Strategist',
-        avatar: '/images/team/chasith.jpeg',
+        avatar: '/images/team/avishka.jpeg',
         link: '#',
     },
     {
@@ -54,7 +54,7 @@ export default function TeamSection() {
                 </div>
                 
                 <div className="mt-12 md:mt-24">
-                    <div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
+                    {/*<div className="grid grid-cols-2 gap-4 border-t py-6 md:grid-cols-4">
                         {members.map((member, index) => (
                             <div key={index}>
                                 <div className="bg-background size-20 rounded-full border p-0.5 shadow shadow-zinc-950/5">
@@ -64,7 +64,7 @@ export default function TeamSection() {
                                 <span className="text-muted-foreground block text-xs">{member.role}</span>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                     <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                         {members.map((member, index) => (
                             <div
